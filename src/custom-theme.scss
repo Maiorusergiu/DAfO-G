@@ -27,5 +27,7 @@ $my-theme: mat.define-light-theme((
 @include mat.progress-spinner-theme($my-theme);
 @include mat.datepicker-theme($my-theme);
 @include mat.radio-theme($my-theme);
+@include mat.checkbox-theme($my-theme);
+@include mat.select-theme($my-theme);
 
 // Include the theme mixins for other components you use here.

@@ -1,0 +1,97 @@
+<div class="flex items-baseline gap-2">
+    <p class="text-lg"><b>Antecedente personale patologice relevante pentru sarcina in curs: </b></p>
+    <div>
+        <div class="grid grid-cols-2 gap-10">
+            <mat-checkbox color="primary" [formControl]="isNesemnificativeControl">Nesemnificative</mat-checkbox>
+            <mat-checkbox color="primary" [formControl]="isNastereCuFatCuRDIUControl">
+                Nastere cu fat cu RDIU
+            </mat-checkbox>
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+            <mat-checkbox color="primary" [formControl]="isMalformatieMaternaPrezentaControl">
+                Malformatie materna prezenta: 
+                <input
+                [formControl]="malformatiePrezentaTextControl"
+                class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+                matInput 
+                type="text"
+                >
+            </mat-checkbox>
+            <mat-checkbox color="primary" [formControl]="isNastereCuFatCuMacrosomControl">
+                Nastere cu fat cu macrosom
+            </mat-checkbox>
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+            <mat-checkbox color="primary" [formControl]="isHTAISControl">
+                HTAIS
+            </mat-checkbox>
+            <mat-checkbox color="primary" [formControl]="isNastereCuFatMortControl">
+                Nastere cu fat mort
+            </mat-checkbox>
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+            <mat-checkbox color="primary" [formControl]="isHipertensiuneArterialaCronicaControl">
+                Hipertensiune arteriala cronica 
+            </mat-checkbox>
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+            <mat-checkbox color="primary" [formControl]="isDiabetZaharatControl">
+                Diabet zaharat
+            </mat-checkbox>
+            <mat-checkbox color="primary" [formControl]="isUterCicatricialControl">
+                Uter cicatricial
+            </mat-checkbox>
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+            <mat-checkbox color="primary" [formControl]="isDiabetGestationalControl">
+                Diabet gestational
+            </mat-checkbox>
+            <mat-checkbox color="primary" [formControl]="isNastereCuFatCuMalformatiiControl">
+                Nastere cu fat cu malformatii
+            </mat-checkbox>
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+            <mat-checkbox color="primary" [formControl]="isLupusControl">
+                Lupus
+            </mat-checkbox>
+            <mat-checkbox color="primary" [formControl]="isNastereCuFatCuAnomaliiCromozomialeControl">
+                Nastere cu fat cu anomalii cromozomiale
+            </mat-checkbox>
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+            <mat-checkbox color="primary" [formControl]="isAfectiuneTiroidianaControl">
+                Afectiune tiroidiana 
+                <input
+                [formControl]="afectiuneTiroidianaTextControl"
+                class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+                matInput 
+                type="text"
+                >
+            </mat-checkbox>
+            <input
+                [formControl]="customTextControl1"
+                class="ml-3 px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+                matInput 
+                type="text"
+                >
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+            <mat-checkbox color="primary" [formControl]="isConsumDeDroguriControl">
+                Consum de droguri
+            </mat-checkbox>
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+            <input
+            [formControl]="customTextControl2"
+            class="ml-3 px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+            matInput 
+            type="text"
+            >
+        </div>
+
+       
+    </div>
+   
+</div>
+
+

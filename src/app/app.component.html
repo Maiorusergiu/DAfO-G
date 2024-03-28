@@ -22,7 +22,7 @@
 
 <ng-template #anomaliiTrimestrul2Template>
     <h1 class="text-center text-2xl my-5">Screening ecografic pentru anomaliile de trimestrul II de sarcina</h1>
-    <section>
+
     <div class="flex flex-col gap-5">
         <div class="flex flex-col gap-2">
             <p class="text-lg"><b>Data examinarii</b>: {{todayDate | date: 'dd/MM/YYYY'}}</p>
@@ -60,7 +60,7 @@
                         <div class="flex items-center gap-3">
                             <mat-radio-button value="other" color="primary"></mat-radio-button>
                             <input
-                            [formControl]="antecedenteFamilialePatologiceRelevanteOtherControl"
+                            [formControl]="antecedenteFamilialePatologiceRelevanteCustomControl"
                             class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
                             matInput type="text"
                             >
@@ -72,10 +72,9 @@
                 
             </div>
         </div>
+        <app-antecedente-personale-patologice-relevante-sarcina></app-antecedente-personale-patologice-relevante-sarcina>
     </div>
        
-        
-    </section>
     
 </ng-template>
 

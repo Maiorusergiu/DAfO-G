@@ -1,0 +1,13 @@
+<mat-select class="px-1 max-w-60 text-base h-7 focus:outline-none border-solid border rounded border-purple-400"  color="primary" [formControl]="toppings" multiple>
+    <mat-select-trigger>
+      {{toppings.value?.[0] || ''}}
+      @if ((toppings.value?.length || 0) > 1) {
+        <span class="example-additional-selection">
+          (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+      }
+    </mat-select-trigger>
+    @for (topping of toppingList; track topping) {
+  <mat-option [value]="topping">{{topping}}</mat-option>
+}
+  </mat-select>

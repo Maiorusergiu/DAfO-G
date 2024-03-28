@@ -13,6 +13,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import {MAT_DATE_LOCALE, MatPseudoCheckboxModule, provideNativeDateAdapter} from '@angular/material/core';
 import { AbstractControl, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AntecedentePersonalePatologiceRelevanteSarcinaComponent } from './section-components/antecedente-personale-patologice-relevante-sarcina/antecedente-personale-patologice-relevante-sarcina.component';
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -23,8 +24,13 @@ import { AbstractControl, FormControl, FormsModule, ReactiveFormsModule } from '
       provideNativeDateAdapter()
     ],
     imports: [
+      //Angular
       CommonModule,
       RouterOutlet,
+      FormsModule,
+      ReactiveFormsModule,
+      //
+      //Material
       MatButtonModule, 
       MatToolbarModule, 
       MatIconModule, 
@@ -34,8 +40,10 @@ import { AbstractControl, FormControl, FormsModule, ReactiveFormsModule } from '
       MatFormFieldModule,
       MatCheckboxModule,
       MatRadioModule,
-      FormsModule,
-      ReactiveFormsModule
+
+      //Section Components
+      AntecedentePersonalePatologiceRelevanteSarcinaComponent 
+      
     ]
       ,
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
@@ -52,7 +60,10 @@ export class AppComponent {
   ultrasoundMachineNameControl: FormControl<string | null> = new FormControl<string>('Voluson E 10 Expert');
   patientFullNameControl: FormControl<string | null> = new FormControl<string>('Maioru Sergiu Ioan');
   antecedenteFamilialePatologiceRelevanteControl: FormControl<string | null> = new FormControl<string>('Nesemnificative');
-  antecedenteFamilialePatologiceRelevanteOtherControl: FormControl<string | null> = new FormControl<string>('');
+  antecedenteFamilialePatologiceRelevanteCustomControl: FormControl<string | null> = new FormControl<string>('');
+  //#endregion
+  //#region Data Variables
+
   //#endregion
   //#region Observables
   _unsubscribeAll$ = new Subject();
@@ -81,15 +92,15 @@ export class AppComponent {
       next:(res) => {
         if(!res) return;
         res === 'Nesemnificative' ? 
-        this._disableControl(this.antecedenteFamilialePatologiceRelevanteOtherControl) : 
-        this._enableControl(this.antecedenteFamilialePatologiceRelevanteOtherControl);
+        this._disableControl(this.antecedenteFamilialePatologiceRelevanteCustomControl) : 
+        this._enableControl(this.antecedenteFamilialePatologiceRelevanteCustomControl);
       }
     })
   }
   //#endregion
   //#region Private Methods
   private _initializeFormControls(): void {
-    this.antecedenteFamilialePatologiceRelevanteOtherControl.disable();
+    this.antecedenteFamilialePatologiceRelevanteCustomControl.disable();
   }
   private _disableControl(formControl: AbstractControl): void {
     formControl.setValue('');

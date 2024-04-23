@@ -14,6 +14,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MAT_DATE_LOCALE, MatPseudoCheckboxModule, provideNativeDateAdapter} from '@angular/material/core';
 import { AbstractControl, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AntecedentePersonalePatologiceRelevanteSarcinaComponent } from './section-components/antecedente-personale-patologice-relevante-sarcina/antecedente-personale-patologice-relevante-sarcina.component';
+import { InformatiiMedicPacientComponent } from './section-components/informatii-medic-pacient/informatii-medic-pacient.component';
+import { GestatieParietateComponent } from './section-components/gestatie-parietate/gestatie-parietate.component';
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -42,23 +44,20 @@ import { AntecedentePersonalePatologiceRelevanteSarcinaComponent } from './secti
       MatRadioModule,
 
       //Section Components
-      AntecedentePersonalePatologiceRelevanteSarcinaComponent 
+      AntecedentePersonalePatologiceRelevanteSarcinaComponent,
+      InformatiiMedicPacientComponent,
+      GestatieParietateComponent
       
     ]
       ,
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppComponent {
-  //#region Constants
-  todayDate = new Date();
-  //#endregion
   //#region Observables
   isAppLoaded: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   //#endregion
   //#region Control Variables
-  sonographerNameControl: FormControl<string | null> = new FormControl<string>('Bene Moza Andreea');
-  ultrasoundMachineNameControl: FormControl<string | null> = new FormControl<string>('Voluson E 10 Expert');
-  patientFullNameControl: FormControl<string | null> = new FormControl<string>('Maioru Sergiu Ioan');
+  
   antecedenteFamilialePatologiceRelevanteControl: FormControl<string | null> = new FormControl<string>('Nesemnificative');
   antecedenteFamilialePatologiceRelevanteCustomControl: FormControl<string | null> = new FormControl<string>('');
   //#endregion

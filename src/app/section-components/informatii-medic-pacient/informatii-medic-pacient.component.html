@@ -1,0 +1,25 @@
+
+<div class="flex flex-col gap-2">
+    <p class="text-lg"><b>Data examinarii</b>: {{todayDate | date: 'dd/MM/YYYY'}}</p>
+    <p class="text-lg"><b>Nume ecografist</b>: 
+        <input [formControl]="sonographerNameControl" class="px-1 h-7 text-base focus:outline-none border-solid border rounded border-purple-400" matInput type="text">
+    </p>
+    <p class="text-lg"><b>Aparat de ecografie</b>: <input [formControl]="ultrasoundMachineNameControl" class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" matInput type="text"></p>
+</div>
+<div class="flex flex-col gap-2">
+    <p class="text-lg"><b>Nume si prenume pacient</b>: <input [formControl]="patientFullNameControl" class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" matInput type="text"></p>
+    
+    <div class="flex items-baseline gap-1">
+        <div>
+            <p class="text-lg"><b>Data nasterii</b>:</p>
+        </div>
+        
+        <div class="flex items-start gap-1">
+            <input placeholder="DD/MM/YYYY" class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker color="primary" #picker></mat-datepicker>
+        </div>
+        
+    </div>
+    
+</div>

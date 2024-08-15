@@ -58,11 +58,11 @@ export class PlacentaComponent {
             josInserata: new FormControl<boolean>(false),
             distantaOCI: new FormControl<number>(0),
             placentaObservatii: new FormControl<string>(''),
-            anomaliiStructuralPlacentare: new FormControl<string>(''),
+            anomaliiStructuralPlacentare: new FormControl<string>('absente'),
             anomaliiStructuralPlacentarePrezente: new FormControl<string>(''),
-            cicatriceUterina: new FormControl<string>(''),
+            cicatriceUterina: new FormControl<string>('nevizualizata'),
             cicatriceUterinaPrezente: new FormControl<string>(''),
-            semneAderentaPlacentaraAnormala: new FormControl<string>(''),
+            semneAderentaPlacentaraAnormala: new FormControl<string>('absente'),
             semneAderentaPlacentaraAnormalaPrezente: new FormControl<string>('')
 
         })

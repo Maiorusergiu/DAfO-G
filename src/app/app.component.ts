@@ -23,6 +23,7 @@ import { ConditiiExaminareComponent } from "./section-components/conditii-examin
 import { NumarFetiViiComponent } from './section-components/numar-feti-vii/numar-feti-vii.component';
 import { ConfirmareaViabilitatiiComponent } from './section-components/confirmarea-viabilitatii/confirmarea-viabilitatii.component';
 import { PlacentaComponent } from './section-components/placenta/placenta.component';
+import { CordonOmbilicalComponent } from './section-components/cordon-ombilical/cordon-ombilical.component';
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -59,7 +60,8 @@ import { PlacentaComponent } from './section-components/placenta/placenta.compon
     ConditiiExaminareComponent,
     NumarFetiViiComponent,
     ConfirmareaViabilitatiiComponent,
-    PlacentaComponent
+    PlacentaComponent,
+    CordonOmbilicalComponent
 ]
       ,
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

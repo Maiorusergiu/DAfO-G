@@ -1,0 +1,23 @@
+<div class="flex flex-col gap-2">
+    <div class="flex items-center gap-3">
+        <p class="text-lg"><b>Antecedente familiale patologice relevante pentru sarcina in curs: </b></p>
+        <mat-radio-group [formControl]="antecedenteFamilialePatologiceRelevanteControl" class="flex items-center">
+            <div class="p-1">
+                <mat-radio-button value="Nesemnificative" color="primary">Nesemnificative</mat-radio-button>
+            </div>
+            <div class="p-1">
+                <div class="flex items-center gap-3">
+                    <mat-radio-button value="other" color="primary"></mat-radio-button>
+                    <input
+                    [formControl]="antecedenteFamilialePatologiceRelevanteCustomControl"
+                    class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+                    matInput type="text"
+                    >
+                </div>
+               
+            </div>
+        </mat-radio-group>
+       
+        
+    </div>
+</div>

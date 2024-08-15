@@ -1,1 +1,82 @@
-<p>istoricul-sarcinii-curente works!</p>,
+<div class="flex items-baseline gap-2">
+    <p class="text-lg"><b>Istoricul sarcinii curente: </b></p>
+    <div class="flex flex-col">
+        <mat-checkbox color="primary" [formControl]="isNesemnificativeControl">Nesemnificative</mat-checkbox>
+        <mat-checkbox color="primary" [formControl]="isSarcinaFIVControl">
+            Sarcina obtinuta cu FIV
+        </mat-checkbox>
+        <mat-checkbox color="primary" [formControl]="isSeroconversieToxoplasmozaControl">
+            Seroconversie pentru Toxoplasmoza
+        </mat-checkbox>
+        <mat-checkbox color="primary" [formControl]="isSeroconversieCMVControl">
+            Seroconversie pentru CMV
+        </mat-checkbox>
+        <mat-checkbox color="primary" [formControl]="isSeroConversieVirusControl">
+            Seroconversie pentru virusul:
+            <input
+            [formControl]="seroconversieVirusControl"
+            class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+            matInput 
+            type="text"
+            >
+        </mat-checkbox>        <mat-checkbox color="primary" [formControl]="isMorfologieTNormalControl">
+            Morfologie T I in limite normale
+        </mat-checkbox>
+        <mat-checkbox color="primary" [formControl]="isMorfologieTAnormalControl">
+            Morfologie T I anormal:
+            <input
+            [formControl]="morfologieTAnormalControl"
+            class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+            matInput 
+            type="text"
+            >
+        </mat-checkbox>
+        <mat-checkbox color="primary" [formControl]="isDubluTestRiscControl">
+            Dublu test, risc  
+            <input
+            [disabled]="true"
+            [formControl]="dubluTestRiscControl"
+            class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+            matInput 
+            type="text"
+            >
+        </mat-checkbox>
+        <mat-checkbox color="primary" [formControl]="isTripluTestRiscControl">
+            Triplu test, risc
+            <input
+            [formControl]="tripluTestRiscControl"
+            class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+            matInput 
+            type="text"
+            >
+        </mat-checkbox>
+        <mat-checkbox color="primary" [formControl]="isCvadrubluTestRiscControl">
+            Cvadrublu test, risc
+            <input
+            [formControl]="cvadrubluTestRiscControl"
+            class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+            matInput 
+            type="text"
+            >
+        </mat-checkbox>
+        <mat-checkbox color="primary" [formControl]="isTestPrenatalNonInvazivNegativControl">
+            Test prenatal non-invaziv negativ
+        </mat-checkbox>
+        <mat-checkbox color="primary" [formControl]="isTestPrenatalNonInvazivPozitivControl">
+            Test prenatal non-invaziv pozitiv
+        </mat-checkbox>
+        <mat-checkbox color="primary" [formControl]="isFaraTesteScreeningControl">
+            Fara teste de screening desfasurate pana la momentul de fata
+        </mat-checkbox>
+        <div class="flex">
+            <p class="text-md">Alte observatii: 
+                <input
+                [formControl]="alteObservatiiControl"
+                class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+                matInput 
+                type="text"
+                ></p>
+        </div>
+        
+    </div>
+</div>

@@ -31,3 +31,9 @@ $my-theme: mat.define-light-theme((
 @include mat.select-theme($my-theme);
 
 // Include the theme mixins for other components you use here.
+
+:root {
+  --color-primary: #{mat-color(primary)};
+  --color-accent: #{mat-color(accent)};
+  --color-warn: #{mat-color(warn)};
+}

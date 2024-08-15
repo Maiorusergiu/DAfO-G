@@ -1,0 +1,107 @@
+<div class="flex items-baseline">
+    <p class="text-lg"><b>Placenta: </b></p>
+    <ng-container [formGroup]="form">
+
+    <div class="flex flex-col">
+        <div class="grid grid-cols-2">
+            <mat-checkbox formControlName="anterioara" color="primary">anterioara</mat-checkbox>
+            <mat-checkbox formControlName="flancDrept" color="primary">,<b>flanc</b> drept</mat-checkbox>
+        </div>
+        <div class="grid grid-cols-2">
+            <mat-checkbox formControlName="posterioara" color="primary">posterioara</mat-checkbox>
+            <mat-checkbox formControlName="flancStang" color="primary">,<b>flanc</b> stang</mat-checkbox>
+        </div>
+        <div class="grid grid-cols-2">
+            <mat-checkbox formControlName="fundica" color="primary">fundica</mat-checkbox>
+            <mat-checkbox formControlName="extindereSpreFundUterin" color="primary">,cu extindere spre fundul uterin</mat-checkbox>
+        </div>
+        <div class="flex gap-3">
+            <div>
+                <mat-checkbox formControlName="previa" color="primary">previa</mat-checkbox>
+            </div>
+            <div class="flex flex-col">
+                <mat-checkbox formControlName="previaCentrala" color="primary">centrala</mat-checkbox>
+                <mat-checkbox formControlName="previaPartialCentrala" color="primary">partial centrala</mat-checkbox>
+                <mat-checkbox formControlName="previaMarginala" color="primary">marginala</mat-checkbox>
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <mat-checkbox formControlName="josInserata" color="primary">jos inserata, </mat-checkbox>
+            <input
+            formControlName="distantaOCI"
+            class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+            matInput 
+            type="text"
+            >
+            <p class="text-sm">mm de la OCI</p>
+        </div>
+        <div class="flex items-center gap-3">
+            <p class="text-sm">Alte observatii: </p>
+            <input
+            formControlName="placentaObservatii"
+            class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+            matInput 
+            type="text"
+            >
+        </div>
+        <div class="flex items-center gap-3">
+            <p class="text-sm">Anomalii structural placentare: </p>
+            <div class="flex items-center gap-3">
+                <mat-radio-group formControlName="anomaliiStructuralPlacentare">
+                    <mat-radio-button value="absente" color="primary">
+                        absente
+                    </mat-radio-button>
+                    <mat-radio-button value="prezente" color="primary">
+                        prezente
+                    </mat-radio-button>
+                </mat-radio-group>
+                <input
+                formControlName="anomaliiStructuralPlacentarePrezente"
+                class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+                matInput 
+                type="text"
+                >
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <p class="text-sm">Cicatrice uterina: </p>
+            <div class="flex items-center gap-3">
+                <mat-radio-group formControlName="cicatriceUterina">
+                    <mat-radio-button value="nevizualizata" color="primary">
+                        nevizualizata
+                    </mat-radio-button>
+                    <mat-radio-button value="vizibila" color="primary">
+                        vizibila
+                    </mat-radio-button>
+                </mat-radio-group>
+                <input
+                formControlName="cicatriceUterinaPrezente"
+                class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+                matInput 
+                type="text"
+                >
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <p class="text-sm">Semne de aderenta placentare anormala: </p>
+            <div class="flex items-center gap-3">
+                <mat-radio-group formControlName="semneAderentaPlacentaraAnormala">
+                    <mat-radio-button value="absente" color="primary">
+                        absente
+                    </mat-radio-button>
+                    <mat-radio-button value="prezente" color="primary">
+                        prezente
+                    </mat-radio-button>
+                </mat-radio-group>
+                <input
+                formControlName="semneAderentaPlacentaraAnormalaPrezente"
+                class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" 
+                matInput 
+                type="text"
+                >
+            </div>
+        </div>
+    </div>
+    </ng-container>
+</div>
+

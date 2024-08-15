@@ -1,0 +1,32 @@
+<div class="flex items-baseline gap-3">
+    <p class="text-lg"><b>Confirmarea viabilitatii: </b></p>
+    <ng-container [formGroup]="form">
+        <mat-radio-group formControlName="miscarileCorduluiFetal">
+            <div class="flex items-baseline gap-3">
+                <p class="text-md">Miscarile cordului fetal: </p>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-3">
+                        <mat-radio-button color="primary" [value]="'Prezente'">Prezente</mat-radio-button>
+                        <div class="flex items-center gap-2">
+                            <p class="text-sm">BCF</p>
+                            <input
+                            [disabled]="true"
+                            formControlName="bataileCorduluiFetal"
+                            class="px-1 h-7 text-base focus:outline-none border-solid border rounded border-purple-400" 
+                            matInput 
+                            type="number"
+                            >
+                            <p class="text-sm">batai/min</p>
+                        </div>
+                       
+                    </div>
+                    
+                    <mat-radio-button color="primary" [value]="'Absente'">Absente</mat-radio-button>
+                </div>
+                
+            </div>
+          
+        </mat-radio-group>
+    </ng-container>
+   
+</div>

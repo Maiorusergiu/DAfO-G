@@ -16,6 +16,13 @@ import { AbstractControl, FormControl, FormsModule, ReactiveFormsModule } from '
 import { AntecedentePersonalePatologiceRelevanteSarcinaComponent } from './section-components/antecedente-personale-patologice-relevante-sarcina/antecedente-personale-patologice-relevante-sarcina.component';
 import { InformatiiMedicPacientComponent } from './section-components/informatii-medic-pacient/informatii-medic-pacient.component';
 import { GestatieParietateComponent } from './section-components/gestatie-parietate/gestatie-parietate.component';
+import { IstoriculSarciniiCurenteComponent } from './section-components/istoricul-sarcinii-curente/istoricul-sarcinii-curente.component';
+import { AntecedenteFamilialeRelevanteSarcinaComponent } from './section-components/antecedente-familiale-relevante-sarcina/antecedente-familiale-relevante-sarcina.component';
+import { EcografieComponent } from './section-components/ecografie/ecografie.component';
+import { ConditiiExaminareComponent } from "./section-components/conditii-examinare/conditii-examinare.component";
+import { NumarFetiViiComponent } from './section-components/numar-feti-vii/numar-feti-vii.component';
+import { ConfirmareaViabilitatiiComponent } from './section-components/confirmarea-viabilitatii/confirmarea-viabilitatii.component';
+import { PlacentaComponent } from './section-components/placenta/placenta.component';
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -26,29 +33,34 @@ import { GestatieParietateComponent } from './section-components/gestatie-pariet
       provideNativeDateAdapter()
     ],
     imports: [
-      //Angular
-      CommonModule,
-      RouterOutlet,
-      FormsModule,
-      ReactiveFormsModule,
-      //
-      //Material
-      MatButtonModule, 
-      MatToolbarModule, 
-      MatIconModule, 
-      UiLoadingScreenComponent,
-      MatDatepickerModule,
-      MatInputModule,
-      MatFormFieldModule,
-      MatCheckboxModule,
-      MatRadioModule,
-
-      //Section Components
-      AntecedentePersonalePatologiceRelevanteSarcinaComponent,
-      InformatiiMedicPacientComponent,
-      GestatieParietateComponent
-      
-    ]
+    //Angular
+    CommonModule,
+    RouterOutlet,
+    FormsModule,
+    ReactiveFormsModule,
+    //
+    //Material
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    UiLoadingScreenComponent,
+    MatDatepickerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    //Section Components
+    AntecedenteFamilialeRelevanteSarcinaComponent,
+    AntecedentePersonalePatologiceRelevanteSarcinaComponent,
+    InformatiiMedicPacientComponent,
+    GestatieParietateComponent,
+    IstoriculSarciniiCurenteComponent,
+    EcografieComponent,
+    ConditiiExaminareComponent,
+    NumarFetiViiComponent,
+    ConfirmareaViabilitatiiComponent,
+    PlacentaComponent
+]
       ,
     schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
@@ -58,8 +70,7 @@ export class AppComponent {
   //#endregion
   //#region Control Variables
   
-  antecedenteFamilialePatologiceRelevanteControl: FormControl<string | null> = new FormControl<string>('Nesemnificative');
-  antecedenteFamilialePatologiceRelevanteCustomControl: FormControl<string | null> = new FormControl<string>('');
+
   //#endregion
   //#region Data Variables
 
@@ -75,39 +86,11 @@ export class AppComponent {
     this._unsubscribeAll$.complete();
   }
   ngOnInit(): void {
-    this._initializeFormControls();
-    this._subscribe();
+   
     
   }
 
-  //#region Subscriptions
-  private _subscribe(): void {
-    this._subscribeToFormControls();
-  }
-  private _subscribeToFormControls(): void {
-    this.antecedenteFamilialePatologiceRelevanteControl.valueChanges
-    .pipe(takeUntil(this._unsubscribeAll$))
-    .subscribe({
-      next:(res) => {
-        if(!res) return;
-        res === 'Nesemnificative' ? 
-        this._disableControl(this.antecedenteFamilialePatologiceRelevanteCustomControl) : 
-        this._enableControl(this.antecedenteFamilialePatologiceRelevanteCustomControl);
-      }
-    })
-  }
-  //#endregion
-  //#region Private Methods
-  private _initializeFormControls(): void {
-    this.antecedenteFamilialePatologiceRelevanteCustomControl.disable();
-  }
-  private _disableControl(formControl: AbstractControl): void {
-    formControl.setValue('');
-    formControl.disable();
-  }
-  private _enableControl(formControl: AbstractControl): void {
-    formControl.enable();
-  }
+  
   //#endregion
   //#region Event Handlers
   @HostListener('window:load',['$event'])

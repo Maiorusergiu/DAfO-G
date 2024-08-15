@@ -1,10 +1,10 @@
 
 <div class="flex gap-2">
     <p class="text-lg"><b>G</b>: 
-        <input [formControl]="numarGestatiiControl" maxlength="2" class="px-1 h-7 max-w-[60px] text-base focus:outline-none border-solid border rounded border-purple-400" matInput type="text">
+        <input [formControl]="numarGestatiiControl" maxlength="2" class="px-1 h-7 max-w-[60px] text-base focus:outline-none border-solid border rounded border-purple-400" matInput type="number">
     </p>
     <p class="text-lg"><b>P</b>: 
-        <input [formControl]="numarParietateControl" maxlength="2" class="px-1 h-7 max-w-[60px] text-base focus:outline-none border-solid border rounded border-purple-400" matInput type="text">
+        <input [formControl]="numarParietateControl" maxlength="2" class="px-1 h-7 max-w-[60px] text-base focus:outline-none border-solid border rounded border-purple-400" matInput type="number">
     </p>
 </div>
 
@@ -13,7 +13,7 @@
         <p class="text-lg"><b>Data ultimei menstruatii</b>:</p>
     </div>
     
-    <div class="flex items-start gap-1">
+    <div class="flex items-center gap-1">
         <input placeholder="DD/MM/YYYY" class="px-1 text-base h-7 focus:outline-none border-solid border rounded border-purple-400" matInput [matDatepicker]="picker">
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker color="primary" #picker></mat-datepicker>
@@ -29,7 +29,7 @@
                     'border-red-400': numarZileVarstaGestationalaControl.hasError('max'),
                     'border-purple-400': !numarZileVarstaGestationalaControl.hasError('max')
                   }"
-                [formControl]="numarZileVarstaGestationalaControl" maxlength="2" class="px-1 h-7 max-w-[60px] text-base focus:outline-none border-solid border rounded border-purple-400" matInput type="text">
+                [formControl]="numarZileVarstaGestationalaControl" maxlength="2" class="px-1 h-7 max-w-[60px] text-base focus:outline-none border-solid border rounded border-purple-400" matInput type="number">
                 <span>zile</span> +
             </div>
     

@@ -1,0 +1,40 @@
+<div class="flex items-baseline gap-2">
+    <p class="text-lg"><b>Conditii de examniare: </b></p>
+    <ng-container [formGroup]="form">
+        <mat-radio-group class="flex items-baseline" formControlName="conditiiExaminare">
+            <div class="p-1">
+                <mat-radio-button value="Nesemnificative" color="primary">Nesemnificative</mat-radio-button>
+            </div>
+            <div class="p-1">
+                <div class="flex items-center gap-3">
+                    <div class="flex">
+                        
+                            <mat-radio-button value="Adecvate" color="primary">Adecvate:</mat-radio-button>
+                            <div class="flex flex-col">
+                                <mat-checkbox formControlName="obezitateMaterna" color="primary">
+                                    obezitatii materne
+                                </mat-checkbox>
+                                <mat-checkbox formControlName="pozitieFetala" color="primary">
+                                    pozitiei fetale, spate fetal anterior
+                                </mat-checkbox>
+                                <mat-checkbox formControlName="lichidAmniotic" color="primary">
+                                    lichid amniotic, in cantitate redusa
+                                </mat-checkbox>
+                                <mat-checkbox formControlName="tratamentTopic" color="primary">
+                                    (tratamentului topic folosit de pacienta pentru preventia vergeturilor)
+                                </mat-checkbox>
+                            </div>
+              
+                       
+                    </div>
+                   
+                  
+                    
+                </div>
+               
+            </div>
+        </mat-radio-group>
+    </ng-container>
+   
+</div>
+
